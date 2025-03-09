@@ -65,7 +65,7 @@ Install the ffmpeg libraries using the command below:
  
 3. Run the following ffmpeg command if you want to remux the audio to the output video from the program as it will not retain the audio from the input video.
     
-        ffmpeg -i output.mp4 -i badapple.mp3 -c:v copy -c:a aac -b:a 116k -map 0:v:0 -map 1:a:0 -shortest -y output-audio.mp4
+        ffmpeg -i output.mp4 -i mikumikubeam.mp3 -c:v copy -c:a aac -b:a 260k -map 0:v:0 -map 1:a:0 -shortest -y output-audio.mp4
 
 > [!Note]
 > This project will work with higher resolution and higher framerate versions of bad apple. Those versions will **NOT** be explicitly provided in this repo, but can be integrated into the project very easily.
