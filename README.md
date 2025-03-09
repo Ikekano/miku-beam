@@ -2,7 +2,7 @@
 This project is the 3rd variation of my PNG grid series.
 
 This version primarily adds the option to apply dithering to the image to make it look more detailed overall than just having a direct pixel to pixel map.
-It also is the most flexible since this program allows for assigning the threshold value. (This has been a feature for a while, but wasn't added in the final versions of bad apple or tetoris)
+It also is the most flexible since this program allows for assigning the threshold value. (This has been a feature for a while, but wasn't added in the final versions of [badapple](https://github.com/Ikekano/bad-apple) or [tetoris](https://github.com/Ikekano/tetoris))
 
 This project requires installing OpenCV and ffmpeg. Can be used in a windows environment but linux is preferred. I use WSL with Ubuntu and it works just fine.
 
