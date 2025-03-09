@@ -50,16 +50,19 @@ Install the ffmpeg libraries using the command below:
 > [!Note]
 > **Command format:** ./mikunyan \<input filename> \<pixel size (W/H)> \<threshold value> \<black pixel filename> \<white pixel filename> \<output filename>
 >
-> The following example line uses the included example PNGs called black.png and white.png with a size of 20x20 and the **recommended threshold value of 110**
+> The following example line uses the included example PNGs called black.png and white.png with a size of 20x20 and the **recommended threshold value of 110** for this video specifically
 
         ./mikunyan mikumikubeam.mp4 20 110 black.png white.png output.mp4
 		
 2. Select the desired Dithering Method by entering a number corresponding to the modes listed in the terminal by the program.
-
 	
-
-		
-
+ 	Enter a number and press the Enter Key to begin processing the video frames using the selected dithering mode
+	```
+ 	Mode 0 = No Dithering
+	Mode 1 = Ordered Dithering
+	Mode 2 = Error-Diffusion Dithering
+ 	```
+ 
 3. Run the following ffmpeg command if you want to remux the audio to the output video from the program as it will not retain the audio from the input video.
     
         ffmpeg -i output.mp4 -i badapple.mp3 -c:v copy -c:a aac -b:a 116k -map 0:v:0 -map 1:a:0 -shortest -y output-audio.mp4
