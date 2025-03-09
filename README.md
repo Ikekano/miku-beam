@@ -1,7 +1,7 @@
 # Miku Miku Beam PNG Grid Generator
 This project is the 3rd variation of my PNG grid series.
 
-This version primarily adds the option to apply dithering to the image to make it look more detailed overall than just having a direct pixel to pixel map.
+This version primarily adds the option to apply dithering to the image to make it look more detailed overall than just having a direct pixel-to-block map.
 It also is the most flexible since this program allows for assigning the threshold value. (This has been a feature for a while, but wasn't added in the final versions of [badapple](https://github.com/Ikekano/bad-apple) or [tetoris](https://github.com/Ikekano/tetoris))
 
 This project requires installing OpenCV and ffmpeg. Can be used in a windows environment but linux is preferred. I use WSL with Ubuntu and it works just fine.
@@ -68,6 +68,6 @@ Install the ffmpeg libraries using the command below:
         ffmpeg -i output.mp4 -i mikumikubeam.mp3 -c:v copy -c:a aac -b:a 260k -map 0:v:0 -map 1:a:0 -shortest -y output-audio.mp4
 
 > [!Note]
-> This project will work with higher resolution and higher framerate versions of bad apple. Those versions will **NOT** be explicitly provided in this repo, but can be integrated into the project very easily.
+> This project will work with higher resolution and higher framerate videos. Those versions will **NOT** be explicitly provided in this repo, but can be integrated into the project very easily.
 >
-> Processing time will vary wildly depending on the increased resolution and framerate of the input video.
+> Processing time will vary wildly depending on the resolution and framerate of the input video.
